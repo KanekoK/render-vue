@@ -1,17 +1,25 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <h1>テスト</h1>
+    <ChildrenComponent
+      v-model="foo"
+    >
+    </ChildrenComponent>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import ChildrenComponent from './components/ChildrenComponent.vue'
 
 export default {
-  name: 'App',
   components: {
-    HelloWorld
+    ChildrenComponent
+  },
+
+  data () {
+    return {
+      foo: []
+    }
   }
 }
 </script>
